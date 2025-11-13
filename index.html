@@ -95,11 +95,37 @@ body {
 
 <!-- 🔔 Warning Banner -->
 <div class="warning-banner">
-  ⚠️ Warning: This website will shut down on 
+  ⚠️ Warning: The Main website will shut down on 
   <span id="shutdown-date">Wednesday 4th of February 2026</span>.
-  Please <strong>bookmark the backup site</strong> →
-  <a href="https://2011stories.bentleyplayz.com" target="_blank">2011stories.bentleyplayz.com</a>
-</div>
+  Please <strong>bookmark this page <strong> →
+h2>Bookmark This Page</h2>
+<p id="bookmark-instructions"></p>
+<button id="bookmark-btn">Bookmark</button>
+
+<script>
+document.getElementById('bookmark-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    const title = document.title;
+    const url = window.location.href;
+
+    // Old IE support
+    if (window.external && ('AddFavorite' in window.external)) {
+        window.external.AddFavorite(url, title);
+    }
+    // Firefox <23 support
+    else if (window.sidebar && window.sidebar.addPanel) {
+        window.sidebar.addPanel(title, url, '');
+    }
+    // Modern browsers: show instructions
+    else {
+        alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
+    }
+});
+
+// Show shortcut instructions on page load
+document.getElementById('bookmark-instructions').textContent =
+    'Tip: Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.';
+</script>
 
 <!-- 🏷️ Site Header -->
 <header class="site-header">
