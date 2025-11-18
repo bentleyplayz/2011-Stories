@@ -95,11 +95,37 @@ body {
 
 <!-- 🔔 Warning Banner -->
 <div class="warning-banner">
-  ⚠️ Warning: This website will shut down on 
-  <span id="shutdown-date">Wednesday 4th of February 2026</span>.
-  Please <strong>bookmark the backup site</strong> →
-  <a href="https://2011stories.bentleyplayz.com" target="_blank">2011stories.bentleyplayz.com</a>
-</div>
+  ⚠️ Warning: This website will shut down on <strong>Wednesday 4th of February 2026</strong>.
+  Please <strong>bookmark the backup site</strong>
+  Please <strong>bookmark this page <strong> →
+h2>Bookmark This Page</h2>
+<p id="bookmark-instructions"></p>
+<button id="bookmark-btn">Bookmark</button>
+
+<script>
+document.getElementById('bookmark-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    const title = document.title;
+    const url = window.location.href;
+
+    // Old IE support
+    if (window.external && ('AddFavorite' in window.external)) {
+        window.external.AddFavorite(url, title);
+    }
+    // Firefox <23 support
+    else if (window.sidebar && window.sidebar.addPanel) {
+        window.sidebar.addPanel(title, url, '');
+    }
+    // Modern browsers: show instructions
+    else {
+        alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
+    }
+});
+
+// Show shortcut instructions on page load
+document.getElementById('bookmark-instructions').textContent =
+    'Tip: Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.';
+</script>
 
 <!-- 🏷️ Site Header -->
 <header class="site-header">
@@ -228,8 +254,8 @@ body {
 
 <!-- 🔔 Warning Banner -->
 <div class="warning-banner">
-  ⚠️ Warning: This website will shut down on <strong>Wednesday 4th of February 2026</strong>.
-  Please <strong>bookmark the backup site</strong> →
+  ⚠️ Warning: The main website will shut down on <strong>Wednesday 4th of February 2026</strong>.
+  Please <strong>bookmark the backup site</strong>
   <a href="https://2011stories.bentleyplayz.com" target="_blank">2011stories.bentleyplayz.com</a>
 </div>
 <!DOCTYPE html>
@@ -376,6 +402,135 @@ body {
         <p><strong>Bentley</strong> is a 13-year-old writer who enjoys crafting action-packed, mysterious, and fun stories. His creativity shines through in his unique storytelling, blending magic, science, and adventure.</p>
     </div>
 <div id="about" class="story">
+
+  <div style="font-family: Arial, sans-serif; border: 2px solid #000; padding: 20px; background:#f8f8f8;">
+
+<h1 style="text-align:center;">THE SECRET FBI AGENT</h1>
+
+<p>
+It was a normal day as an FBI agent. I, FBI Agent John Smith (Bentley Playz), got a call from my boss.  
+<br><strong>“TOP SECRET CASE — COME TO MY OFFICE.”</strong>
+</p>
+
+<p>
+I walk over to his office and he tells me I’ve been assigned a case involving the <strong>#1 felon wanted by the FBI.</strong>
+</p>
+
+<hr>
+
+<h2 style="text-align:center;">FEDERAL BUREAU OF INVESTIGATION<br>WANTED SUBJECT PROFILE — PRE-ASSIGNMENT BRIEF</h2>
+
+<table style="width:100%; border-collapse:collapse; border:1px solid #000; background:#fff;">
+<tr><td style="border:1px solid #000; padding:8px;"><strong>Subject Name:</strong></td><td style="border:1px solid #000; padding:8px;">Unknown (Identity Not Confirmed)</td></tr>
+<tr><td style="border:1px solid #000; padding:8px;"><strong>Known Aliases:</strong></td><td style="border:1px solid #000; padding:8px;">“The Ghost,” “Black Viper,” “M.K.”</td></tr>
+<tr><td style="border:1px solid #000; padding:8px;"><strong>FBI Most Wanted Rank:</strong></td><td style="border:1px solid #000; padding:8px;">#1 Most Wanted Felon</td></tr>
+<tr><td style="border:1px solid #000; padding:8px;"><strong>Case Classification:</strong></td><td style="border:1px solid #000; padding:8px;">HIGH-THREAT / LEVEL 5 PRIORITY</td></tr>
+</table>
+
+<hr>
+
+<h3>PHYSICAL DESCRIPTION</h3>
+<ul>
+    <li>Sex: Male</li>
+    <li>Race: Unknown</li>
+    <li>Height: Approx. 6'2" (188 cm)</li>
+    <li>Weight: Estimated 190–205 lbs (86–93 kg)</li>
+    <li>Build: Athletic / Muscular</li>
+    <li>Hair: Black (often concealed under headgear)</li>
+    <li>Eyes: Dark brown</li>
+    <li>Distinguishing Features:
+        <ul>
+            <li>Scar across left eyebrow</li>
+            <li>Typically wears tactical gloves</li>
+            <li>Known for full facial concealment during crimes</li>
+        </ul>
+    </li>
+</ul>
+
+<hr>
+
+<h3>CRIMINAL HISTORY</h3>
+<p>The subject is wanted for multiple high-level federal offenses, including:</p>
+<ul>
+    <li>12 counts – Armed Robbery of federal transport vehicles</li>
+    <li>5 counts – Homicide / Aggravated Murder</li>
+    <li>Federal Cyber Intrusion into secure government servers</li>
+    <li>Weapons trafficking across state and international borders</li>
+    <li>Bomb-making and explosives distribution</li>
+    <li>Connections to major organized crime syndicates</li>
+</ul>
+
+<hr>
+
+<h3>THREAT ASSESSMENT</h3>
+<ul>
+    <li>Danger Level: EXTREME</li>
+    <li>Risk to Public: HIGH</li>
+    <li>Known to Carry: Fully automatic weapons, military-grade explosives</li>
+    <li>Behavioral Profile:
+        <ul>
+            <li>Highly strategic</li>
+            <li>Avoids capture through advanced planning</li>
+            <li>Shows no hesitation in using lethal force</li>
+        </ul>
+    </li>
+    <li><strong>Officer Safety Warning:</strong> Subject should be considered <strong>ARMED AND EXTREMELY DANGEROUS.</strong> Engagement without tactical backup is prohibited.</li>
+</ul>
+
+<hr>
+
+<h3>LAST KNOWN ACTIVITY</h3>
+<ul>
+    <li>Evaded federal capture during multi-agency operation</li>
+    <li>Suspected of planning another high-risk offense within 48–72 hours</li>
+    <li>Last traced signal detected in <strong>Locane, New Jersey</strong></li>
+</ul>
+
+<hr>
+
+<h2>FIELD REPORT</h2>
+
+<p>
+I head to the last seen location and approach the crime scene. I spot the suspect and shout:
+<br><strong>“FREEZE! FBI — PUT YOUR HANDS UP!”</strong>
+</p>
+
+<p>
+He screams and pulls out a can of <strong>hair spray</strong>.
+<br>I respond, “Hair spray? What’s that going to d—”
+</p>
+
+<p style="font-weight:bold; color:black; background:yellow; padding:4px; display:inline-block;">
+I BLACKED OUT FOR 2 DAYS
+</p>
+
+<p>
+When I recovered, I called for backup, grabbed my gear, and returned to confront him.
+</p>
+
+<p>
+The suspect then said:  
+<br><strong>“FREEZE, Agent John Smith… or should I say Bentley Playz.”</strong>
+</p>
+
+<p>
+I yelled into my radio: <strong>“BACKUP! WE NEED THE FLASH MEMORY ERASER!”</strong>
+</p>
+
+<p>
+We finished taking him down, and after the arrest, I became the <strong>#1 AGENT.</strong>
+<br>THE END.
+</p>
+
+<hr>
+
+<div style="text-align:center; margin-top:20px; font-size:14px;">
+    <strong>ALL RIGHTS RESERVED — PROPERTY OF BENTLEY PLAYZ</strong><br>
+    <em>Made for 2011stories.com</em>
+</div>
+
+</div>
+
 
     <div class="story">
   <h1>MAGIC ISN’T REAL — Full Story by Bentley</h1>
