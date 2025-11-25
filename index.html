@@ -1,236 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bentley Playz Stories</title>
 
-<style>
-/* === Warning Banner === */
-.warning-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(90deg, #ff6a00, #ee0979, #00c3ff);
-  color: #fff;
-  text-align: center;
-  padding: 12px 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  z-index: 2000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  animation: gradientShift 6s infinite alternate;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-.warning-banner a {
-  color: #ffff66;
-  text-decoration: underline;
-  margin-left: 8px;
-  font-weight: 600;
-}
-
-.warning-banner a:hover {
-  color: #fff;
-  text-shadow: 0 0 6px #fff;
-}
-
-/* === Site Header === */
-header.site-header {
-  margin-top: 60px; /* Adds space for warning banner */
-  background: linear-gradient(135deg, #0066cc, #00bfa5);
-  color: white;
-  text-align: center;
-  padding: 30px 10px;
-  font-size: 2.4em;
-  font-weight: 700;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  letter-spacing: 1px;
-  z-index: 1000;
-  position: relative;
-}
-
-/* === Navigation === */
-nav {
-  background-color: #004d40;
-  text-align: center;
-  padding: 12px 0;
-  position: sticky;
-  top: 60px; /* keep it below warning banner */
-  z-index: 1500;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 15px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.2s;
-}
-
-nav a:hover {
-  background-color: #00796b;
-  transform: scale(1.05);
-}
-
-/* === Body === */
-body {
-  margin: 0;
-  background: linear-gradient(135deg, #e6f0ff, #fffaf2);
-  color: #222;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  line-height: 1.7;
-}
-</style>
-</head>
-<body>
-
-<!-- 🔔 Warning Banner -->
-<div class="warning-banner">
-  ⚠️ Warning: This website will shut down on 
-  <span id="shutdown-date">Wednesday 4th of February 2026</span>.
-  Please <strong>bookmark the backup site</strong> →
-  <a href="https://2011stories.bentleyplayz.com" target="_blank">2011stories.bentleyplayz.com</a>
-</div>
-
-<!-- 🏷️ Site Header -->
-<header class="site-header">
-  2011 Stories by Bentley
-</header>
-
-<!-- 📚 Navigation -->
-<nav>
-  <a href="#about">About the Author</a>
-  <a href="#magic">Read The Magic Football</a>
-  <a href="#magicguy">Read The Magic Guy Made By Bentley</a>
-</nav>
-
-<script>
-// Convert UTC shutdown date to user's local time
-const shutdownUTC = new Date('2026-02-04T20:47:18Z');
-const options = {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: '2-digit',
-  second: '2-digit',
-  timeZoneName: 'short'
-};
-const localTime = shutdownUTC.toLocaleString(undefined, options);
-document.getElementById('shutdown-date').textContent = localTime;
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bentley Playz Stories</title>
-
-<style>
-/* === Warning Banner === */
-.warning-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(90deg, #ff6a00, #ee0979, #00c3ff);
-  color: #fff;
-  text-align: center;
-  padding: 12px 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  z-index: 2000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  animation: gradientShift 6s infinite alternate;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-.warning-banner a {
-  color: #ffff66;
-  text-decoration: underline;
-  margin-left: 8px;
-  font-weight: 600;
-}
-
-.warning-banner a:hover {
-  color: #fff;
-  text-shadow: 0 0 6px #fff;
-}
-
-/* === Site Header === */
-header.site-header {
-  margin-top: 60px; /* Adds space for warning banner */
-  background: linear-gradient(135deg, #0066cc, #00bfa5);
-  color: white;
-  text-align: center;
-  padding: 30px 10px;
-  font-size: 2.4em;
-  font-weight: 700;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  letter-spacing: 1px;
-  z-index: 1000;
-  position: relative;
-}
-
-/* === Navigation === */
-nav {
-  background-color: #004d40;
-  text-align: center;
-  padding: 12px 0;
-  position: sticky;
-  top: 60px; /* keep it below warning banner */
-  z-index: 1500;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 15px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.2s;
-}
-
-nav a:hover {
-  background-color: #00796b;
-  transform: scale(1.05);
-}
-
-/* === Body & Layout === */
-body {
-  margin: 0;
-  background: linear-gradient(135deg, #e6f0ff, #fffaf2);
-  color: #222;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  line-height: 1.7;
-}
-</style>
-</head>
-<body>
-
-<!-- 🔔 Warning Banner -->
-<div class="warning-banner">
-  ⚠️ Warning: This website will shut down on <strong>Wednesday 4th of February 2026</strong>.
-  Please <strong>bookmark the backup site</strong> →
-  <a href="https://2011stories.bentleyplayz.com" target="_blank">2011stories.bentleyplayz.com</a>
 </div>
 <!DOCTYPE html>
 <html lang="en">
@@ -251,6 +19,25 @@ body {
   <link rel="icon" type="image/jpeg" href="https://iili.io/FPOEjgS.md.jpg">
 
   <style>
+
+/* === Warning Banner === */
+.warning-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #00c3ff);
+  color: #fff;
+  text-align: center;
+  padding: 12px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  z-index: 2000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  animation: gradientShift 6s infinite alternate;
+}
+
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
@@ -367,8 +154,37 @@ body {
         margin: 8px 0;
       }
     }
+    /* === Footer === */
+footer.site-footer {
+  background: linear-gradient(135deg, #004d40, #00796b);
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+  position: relative; /* allows it to appear after content */
+  margin-top: 40px; /* space from content */
+}
+
+footer.site-footer a {
+  color: #ffeb3b;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+footer.site-footer a:hover {
+  color: #fff;
+  text-shadow: 0 0 4px #fff;
+}
+
   </style>
 </head>
+<!-- 🔔 Warning Banner -->
+<div class="warning-banner">
+  ⚠️ Warning: This website will shut down on <strong>Wednesday 4th of February 2026</strong>.
+  Please <strong>bookmark the backup site</strong> →
+  <a href="https://2011stories.bentleyplayz.com" target="_blank">2011stories.bentleyplayz.com</a>
 <div class="container">
 
     <div id="about" class="story">
@@ -611,7 +427,8 @@ body {
   <p><strong>AND EVERYONE LIVED HAPPILY EVER AFTER. THE END.</strong></p>
 
   <footer>
-    <p><em>All Rights Reserved. Made by Bentley Playz. Made for 2011stories.com and is property of 2011 Stories.</em></p>
+    <p>All Rights Reserved. Made by Bentley Playz. Made for 2011stories.com and is property of 2011 Stories.</p>
+
   </footer>
 
      <h1>A Scary Halloween!</h1>
